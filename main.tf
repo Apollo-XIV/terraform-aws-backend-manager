@@ -21,6 +21,7 @@ module "env_gen" {
   environments = var.environments
   variables    = var.variables
 
+  role_arn = module.s3_backend.role_arn
   environment_configs_dir = var.environment_configs_dir
   output_dir              = var.output_dir
 }
